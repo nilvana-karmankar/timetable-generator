@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Login</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/login.css') }}">
+</head>
+<body>
+  <div class="container">
+    <!-- Left Side: Login Form -->
+    <div class="login-box">
+      <h1 class="brand">Welcome back</h1>
+      <p class="sub-text">Please enter your details</p>
+
+      <!-- Google Sign-in Button -->
+      <a href="{{ url_for('google_login_redirect') }}" class="google-btn">
+        <img src="{{ url_for('static', filename='images/google-logo.png') }}" alt="Google Logo">
+        <span>Sign in with Google</span>
+      </a>
+
+      <!-- Divider -->
+      <div class="divider">or</div>
+
+      <!-- Login Form -->
+      <form action="{{ url_for('login_page') }}" method="POST">
+        <label for="email">Email address</label>
+        <input type="email" id="email" name="email" placeholder="Enter your email" required>
+
+        <label for="password">Password</label>
+        <input type="password" id="password" name="password" placeholder="Enter your password" required>
+
+        <button type="submit" class="login-btn">Sign in</button>
+      </form>
+
+      <!-- Sign Up Button -->
+      <a href="{{ url_for('signup_page') }}" class="signup-btn">Sign up</a>
+    </div>
+
+    <!-- Right Side: Background Image & Overlay Text -->
+    <div class="right-side">
+      <div class="image-overlay">
+        <h2>Timetrix – Your Time, Your Rules, Our Magic.</h2>
+        <p>Every great achievement starts with a well-planned timetable.</p>
+      </div>
+    </div>
+  </div>
+</body>
+</html>

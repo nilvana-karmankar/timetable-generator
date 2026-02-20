@@ -1,0 +1,224 @@
+/* General Reset */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+  
+  /* Navbar Styles */
+  .navbar {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(240, 240, 240, 0.3);
+    backdrop-filter: blur(8px);
+    padding: 10px 0;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  }
+  
+  .nav-button {
+    text-decoration: none;
+    color: #223344;
+    padding: 10px 18px;
+    margin: 0 4px;
+    background-color: rgba(255, 255, 255, 0.15);
+    border-radius: 6px;
+    font-weight: bold;
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  .nav-button:hover {
+    background-color: #58bfa0;
+    color: #fff;
+  }
+  
+  .nav-button.active {
+    background-color: #58bfa0;
+    pointer-events: none;
+  }
+  
+  /* Balanced Light Mode Background */
+  body {
+    padding-top: 60px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(120deg, #90b4d8, #c0e0dc, #b5e5da);
+    color: #2d2d2d;
+    transition: background 0.5s ease-in-out, color 0.3s ease-in-out;
+  }
+  
+  /* Balanced Dark Mode */
+  body.dark-mode {
+    background: linear-gradient(120deg, #1b2a38, #243b4a, #204041);
+    color: #d2f2f0;
+  }
+  
+  body.dark-mode .navbar {
+    background-color: rgba(0, 0, 0, 0.35);
+  }
+  
+  /* Container Styling */
+  .container {
+    width: 92%;
+    max-width: 800px;
+    padding: 28px;
+    background-color: rgba(255, 255, 255, 0.15);
+    backdrop-filter: blur(8px);
+    border-radius: 12px;
+    box-shadow: 0 4px 14px rgba(0, 0, 0, 0.15);
+    margin: 0 auto;
+    color: inherit;
+  }
+  
+  /* Headers */
+  h1, h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #123;
+  }
+  
+  h1 {
+    font-size: 2rem;
+  }
+  
+  h2 {
+    font-size: 1.3rem;
+  }
+  
+  /* Form Styling */
+  form {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .subject-group {
+    margin-bottom: 16px;
+    padding: 14px;
+    border: 1px solid #aaa;
+    border-radius: 8px;
+    background-color: rgba(255, 255, 255, 0.07);
+  }
+  
+  label {
+    font-weight: 500;
+    margin-top: 10px;
+    display: block;
+  }
+  
+  input[type="text"],
+  input[type="number"],
+  input[type="time"],
+  select {
+    width: 100%;
+    padding: 10px;
+    margin-top: 6px;
+    margin-bottom: 12px;
+    border: 1px solid #3498db;
+    border-radius: 6px;
+    background-color: rgba(255, 255, 255, 0.2);
+    color: #222;
+    font-size: 1rem;
+  }
+  
+  input:focus,
+  select:focus {
+    border-color: #2b7fb6;
+    outline: none;
+  }
+  
+  /* Buttons */
+  button {
+    padding: 11px;
+    font-size: 1rem;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    margin-top: 10px;
+    transition: background-color 0.3s ease;
+  }
+  
+  button[type="submit"] {
+    background-color: #58bfa0;
+    color: #fff;
+  }
+  
+  button[type="submit"]:hover {
+    background-color: #3c9f87;
+  }
+  
+  #clear-form {
+    background-color: #e74c3c;
+    color: white;
+  }
+  
+  #clear-form:hover {
+    background-color: #c0392b;
+  }
+  
+  /* Table Styling */
+  #timetable {
+    margin-top: 30px;
+  }
+  
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 15px;
+    font-size: 1rem;
+  }
+  
+  th, td {
+    border: 1px solid #bbb;
+    padding: 12px;
+    text-align: center;
+    background-color: rgba(255, 255, 255, 0.25);
+    color: #222;
+  }
+  
+  th {
+    background-color: #58bfa0;
+    color: white;
+  }
+  
+  td:nth-child(even) {
+    background-color: rgba(255, 255, 255, 0.15);
+  }
+  
+  /* Dark Mode Table */
+  body.dark-mode th {
+    background-color: #2f6d7d;
+  }
+  
+  body.dark-mode td {
+    background-color: rgba(0, 0, 0, 0.3);
+    color: #d6ffff;
+  }
+  
+  body.dark-mode table {
+    border-color: #444;
+  }
+  
+  body.dark-mode .container {
+    background-color: rgba(0, 0, 0, 0.2);
+    color: #fff;
+  }
+  
+  /* Theme Toggle Button */
+  #toggle-theme {
+    margin-top: 20px;
+    padding: 10px 15px;
+    background-color: #2b7fb6;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+  }
+  
+  #toggle-theme:hover {
+    background-color: #1e5e87;
+  }
+  

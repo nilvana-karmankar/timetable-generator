@@ -1,0 +1,28 @@
+📂 TimetableGenerator
+│── 📂 templates
+│   ├── home.html        # Home page
+│   ├── login.html       # Login page
+│   ├── timetable.html   # timetable.html
+│   ├── about.html       # about.html
+│── 📂 static
+│   ├── 📂 css
+│   │   ├── login.css
+│   │   ├── home.css
+│   │   ├── about.css
+│   │   ├── timetable.css
+│   ├── 📂 js
+│   │   ├── login.js
+│   │   ├── timetable.js
+│   ├── 📂 images
+│   │   ├── a.jpg
+│   │   ├── timetable.jpg
+│   │   ├── home.jpg
+│   │   ├── about.jpg
+│   │   ├── logout.jpg
+│   │   ├── back2.jpg
+│   │   ├── background.jpg
+│── 📂 instance
+│   ├── user.db
+│── app.py  <== Flask backend
+│── .env
+

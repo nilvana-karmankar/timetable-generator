@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Advanced Timetable Generator</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/timetable.css') }}">
+</head>
+<body>
+
+  <!-- Navigation -->
+  <nav class="navbar">
+    <a href="{{ url_for('home_page') }}" class="nav-button">Home</a>
+    <a href="{{ url_for('about_page') }}" class="nav-button">About</a>
+    <a href="{{ url_for('timetable_page') }}" class="nav-button active">Timetable Generator</a>
+    <a href="{{ url_for('signout') }}" class="nav-button">Logout</a>
+  </nav>
+
+  <div class="container">
+    <h1>Advanced Timetable Generator</h1>
+
+    <!-- Global Config Settings -->
+    <div>
+      <label for="startTime">Start Time:</label>
+      <input type="time" id="startTime" required>
+
+      <label for="endTime">End Time:</label>
+      <input type="time" id="endTime" required>
+
+      <label for="periodCount">Number of Periods Per Day:</label>
+      <input type="number" id="periodCount" min="1" max="12" required>
+
+      <button type="button" id="viewPeriodTimes">View Period Times</button>
+      <div id="periodTimesDisplay"></div>
+    </div>
+
+    <!-- Break Configuration -->
+    <div>
+      <h3>Configure Breaks</h3>
+      <div id="breaks-container"></div>
+      <button type="button" id="add-break">+ Add Break</button>
+      <button type="button" id="view-break-layout">View Full Layout</button>
+      <div id="layoutDisplay"></div>
+    </div>
+
+    <!-- Working Days -->
+    <div>
+      <label for="workingDays">Number of Working Days:</label>
+      <select id="workingDays" required>
+        <option value="5" selected>5 Days (Mon–Fri)</option>
+        <option value="6">6 Days (Mon–Sat)</option>
+        <option value="4">4 Days</option>
+        <option value="3">3 Days</option>
+      </select>
+    </div>
+
+    <!-- Class Configuration -->
+    <div>
+      <label for="classCount">Number of Classes/Departments:</label>
+      <input type="number" id="classCount" min="1" max="20" required>
+
+      <button type="button" id="generate-classes">Generate Classes</button>
+    </div>
+
+    <!-- Main Form -->
+    <form id="timetable-form">
+      <div id="classes-container"></div>
+
+      <button type="submit">Generate Timetables</button>
+      <button type="button" id="save-timetable">Save Timetables</button>
+    </form>
+
+    <!-- Timetable Display -->
+    <div id="timetable-display"></div>
+
+    <button id="toggle-theme">Toggle Dark Mode</button>
+  </div>
+
+  <script src="{{ url_for('static', filename='js/timetable.js') }}"></script>
+</body>
+</html>

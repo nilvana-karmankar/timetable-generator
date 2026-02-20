@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Timetrix - About</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/home.css') }}">
+  <style>
+    /* Gradient Background */
+    body {
+      background: linear-gradient(120deg, #b3cde0, #dfe7fd, #5dade2);
+      background-size: cover;
+      background-attachment: fixed;
+    }
+
+    /* Blurry Transparent Navigation */
+    .navbar {
+      position: fixed;
+      top: 0;
+      width: 100%;
+      background: rgba(255, 255, 255, 0.1);
+      backdrop-filter: blur(10px);
+      padding: 15px 20px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      z-index: 1000;
+    }
+
+    .nav-links a {
+      color: white;
+      text-decoration: none;
+      margin: 0 15px;
+      font-size: 1.2em;
+    }
+
+    /* About Section */
+    .about-section {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: left;
+      padding: 50px;
+      gap: 40px;
+    }
+
+    .about-section img {
+      max-width: 30%; /* Smaller Image */
+      height: auto;
+    }
+
+    .about-content {
+      max-width: 50%;
+    }
+
+    .about-content h1, .about-content h2, .about-content p {
+      font-size: 1.2em;
+      color: #3a3a6e; /* Blue-Purple Color */
+      text-shadow: 0 0 10px rgba(255, 255, 255, 0.7); /* Glow Effect */
+    }
+
+    .about-content h1 {
+      font-size: 2.5em;
+      text-shadow: 0 0 12px rgba(255, 255, 255, 0.9);
+    }
+
+    /* Transparent Contact Box */
+    .contact-box {
+      background: rgba(255, 255, 255, 0.2);
+      backdrop-filter: blur(10px);
+      padding: 20px;
+      border-radius: 10px;
+      max-width: 400px;
+      margin: auto;
+      text-align: center;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    }
+  </style>
+</head>
+<body>
+  <!-- Navigation Bar -->
+  <header class="navbar">
+    <div class="nav-logo">
+      <img src="{{ url_for('static', filename='images/Logo.jpeg') }}" alt="Timetrix Logo">
+      <span class="site-title">TIMETRIX</span>
+    </div>
+    <nav class="nav-links">
+      <a href="{{ url_for('home_page') }}">Home</a>
+      <a href="{{ url_for('timetable_page') }}">Timetable</a>
+      <a href="{{ url_for('signout') }}">Sign Out</a>
+    </nav>
+  </header>
+
+  <!-- About Section -->
+  <section class="about-section">
+    <img src="{{ url_for('static', filename='images/h5.png') }}" alt="Timetable">
+    <div class="about-content">
+      <h1>Importance of Time Management</h1>
+      <p>
+        Time is one of the most valuable resources. Proper time management helps individuals and organizations 
+        become more efficient and productive. A well-structured timetable allows for better planning, 
+        reducing stress and increasing focus.
+      </p>
+      <h2>How to Use a Timetable?</h2>
+      <p>
+        Creating a timetable involves identifying tasks, prioritizing them, and allocating time efficiently. 
+        Whether you're a student managing study sessions or a professional handling meetings, a proper schedule 
+        ensures optimal time utilization.
+      </p>
+      <h2>Benefits of a Timetable Generator</h2>
+      <p>
+        A timetable generator automates scheduling by preventing conflicts and ensuring efficiency. 
+        With Timetrix, you can create personalized timetables within minutes, adjusting them to your needs effortlessly.
+      </p>
+    </div>
+  </section>
+
+  <!-- Contact Box -->
+  <section class="contact-box">
+    <h2>Contact Us</h2>
+    <p><strong>Email:</strong> nikunjmeher@gmail.com</p>
+    <p><strong>Phone:</strong> 9014603728</p>
+    <p><strong>Address:</strong> Madhura Nagar, Rallaguda, Hyderabad, Telangana 501218, India</p>
+  </section>
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    <p class="footer-note">© 2025 Timetrix. All rights reserved.</p>
+  </footer>
+</body>
+</html>

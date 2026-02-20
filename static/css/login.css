@@ -1,0 +1,215 @@
+/* Import Google Font */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
+
+/* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+/* Gradient Background: Blue, Purple, Red, Yellow */
+body {
+  background: linear-gradient(135deg, #6a11cb, #2575fc, #ff6b6b, #f8b500);
+  background-size: 300% 300%;
+  animation: gradientShift 12s ease infinite;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+/* Background Animation */
+@keyframes gradientShift {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+/* Glossy Glass Effect */
+.container {
+  display: flex;
+  width: 720px;
+  height: 510px; /* Increased height to fit Sign-up button */
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 12px;
+  backdrop-filter: blur(15px);
+  overflow: hidden;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+/* Left Side: Transparent Login Box */
+.login-box {
+  flex: 1;
+  padding: 40px 30px;
+  background: rgba(255, 255, 255, 0.15);
+  border-radius: 12px;
+}
+
+/* Text Styling */
+.brand {
+  font-size: 22px;
+  margin-bottom: 10px;
+  color: #fff;
+  text-align: center;
+  font-weight: 600;
+}
+
+.sub-text {
+  font-size: 14px;
+  color: #eee;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+/* Google Button */
+.google-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 15px;
+  background: rgba(255, 255, 255, 0.15);
+  border: 1px solid rgba(255, 255, 255, 0.5);
+  border-radius: 5px;
+  text-decoration: none;
+  transition: background 0.3s, box-shadow 0.3s;
+}
+
+.google-btn:hover {
+  background: rgba(255, 255, 255, 0.2);
+  box-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
+}
+
+.google-btn img {
+  width: 18px;
+  margin-right: 6px;
+}
+
+.google-btn span {
+  font-size: 14px;
+  font-weight: bold;
+  color: #fff;
+}
+
+/* Login Form */
+form {
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+}
+
+label {
+  font-size: 14px;
+  font-weight: 600;
+  color: #fff;
+  margin-top: 8px;
+}
+
+input {
+  width: 100%;
+  padding: 10px;
+  margin-top: 5px;
+  margin-bottom: 12px;
+  border: 1px solid rgba(255, 255, 255, 0.4);
+  border-radius: 5px;
+  font-size: 14px;
+  outline: none;
+  background: rgba(255, 255, 255, 0.2);
+  color: #fff;
+  transition: border 0.3s;
+}
+
+input::placeholder {
+  color: rgba(255, 255, 255, 0.7);
+}
+
+input:focus {
+  border: 1px solid rgba(255, 255, 255, 0.7);
+}
+
+/* Sign in Button */
+.login-btn {
+  width: 100%;
+  padding: 12px; /* Slightly bigger */
+  margin-top: 12px;
+  background: rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.6);
+  color: #fff;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 15px;
+  transition: background 0.3s, border 0.3s, box-shadow 0.3s;
+}
+
+.login-btn:hover {
+  background: rgba(255, 255, 255, 0.2);
+  box-shadow: 0 0 10px rgba(255, 255, 255, 0.4);
+}
+
+/* Sign-up Button (Fully Visible & Bigger) */
+.signup-btn {
+  display: block;
+  width: 100%;
+  padding: 12px; /* Bigger button */
+  margin-top: 14px;
+  background: rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.5);
+  color: #fff;
+  text-align: center;
+  text-decoration: none;
+  border-radius: 5px;
+  font-size: 15px;
+  transition: background 0.3s, border 0.3s, box-shadow 0.3s;
+}
+
+.signup-btn:hover {
+  background: rgba(255, 255, 255, 0.2);
+  box-shadow: 0 0 10px rgba(255, 255, 255, 0.4);
+}
+
+/* Right Side: Image & Overlay Text */
+.right-side {
+  flex: 1;
+  position: relative;
+  background: url("../images/login.jpeg") center/cover no-repeat;
+}
+
+.image-overlay {
+  position: absolute;
+  bottom: 20px;
+  left: 15px;
+  color: #fff;
+  background: rgba(0, 0, 0, 0.4);
+  padding: 12px;
+  border-radius: 5px;
+}
+
+.image-overlay h2 {
+  font-size: 16px;
+  margin-bottom: 8px;
+}
+
+.image-overlay p {
+  font-size: 13px;
+  line-height: 1.3;
+}
+
+/* Fade-in Animation */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.container, .login-box {
+  animation: fadeIn 1s ease-in-out;
+}

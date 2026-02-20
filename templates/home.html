@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Timetrix - Home</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/home.css') }}">
+  <style>
+    /* Increase font size and add glow effect */
+    h1, h2, h3, p {
+      font-size: 1.2em;
+    }
+    h1 {
+      font-size: 2.5em;
+      text-shadow: 0 0 10px rgba(255, 255, 255, 0.8);
+    }
+    h2 {
+      font-size: 2em;
+      text-shadow: 0 0 8px rgba(255, 255, 255, 0.6);
+    }
+    h3 {
+      font-size: 1.8em;
+      text-shadow: 0 0 6px rgba(255, 255, 255, 0.5);
+    }
+    p {
+      font-size: 1.2em;
+      text-shadow: 0 0 5px rgba(255, 255, 255, 0.3);
+    }
+
+    /* Glossy background with mixed colors */
+    body {
+      background: linear-gradient(120deg, #93E9BE, #ADD8E6);
+      background-size: cover;
+      background-attachment: fixed;
+    }
+    
+    /* Glossy effect */
+    .glass {
+      background: rgba(255, 255, 255, 0.2);
+      backdrop-filter: blur(10px);
+      border-radius: 10px;
+      padding: 20px;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    }
+
+    /* Transparent sticky navigation bar */
+    .navbar {
+      position: fixed;
+      top: 0;
+      width: 100%;
+      background: rgba(255, 255, 255, 0.1);
+      backdrop-filter: blur(10px);
+      padding: 15px 20px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      z-index: 1000;
+    }
+
+    .nav-links a {
+      color: white;
+      text-decoration: none;
+      margin: 0 15px;
+      font-size: 1.2em;
+    }
+
+    .hero {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 50px;
+    }
+    .hero img {
+      max-width: 30%; /* Made h1.jpeg smaller */
+      height: auto;
+    }
+  </style>
+</head>
+<body>
+  <!-- Navigation Bar -->
+  <header class="navbar">
+    <div class="nav-logo">
+      <img src="{{ url_for('static', filename='images/Logo.jpeg') }}" alt="Timetrix Logo">
+      <span class="site-title">TIMETRIX</span>
+    </div>
+    <nav class="nav-links">
+      <a href="{{ url_for('about_page') }}">About</a>
+      <a href="{{ url_for('timetable_page') }}">Timetable</a>
+      <a href="{{ url_for('signout') }}">Sign Out</a>
+    </nav>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="hero glass">
+    <div class="hero-content">
+      <h1>Timetable Generators</h1>
+      <h2>Effortlessly generate timetables for education</h2>
+      <p>
+        Seamlessly schedule your classes with advanced features that allow you to plan your day, 
+        your class, or your entire institution. Timetrix's easy-to-use platform helps you focus 
+        on what matters—teaching.
+      </p>
+      <button class="cta-btn" onclick="window.location.href='{{ url_for('about_page') }}'">Get in Touch</button>
+    </div>
+    <img src="{{ url_for('static', filename='images/h1.jpeg') }}" alt="Timetable Generators">
+  </section>
+
+  <!-- Features Section -->
+  <section class="features glass">
+    <h2>Effortlessly create effective schedules</h2>
+    <p>
+      With Timetrix, organizing your classes or workplace has never been easier. Our intuitive 
+      tools let you drag, drop, and customize schedules in minutes.
+    </p>
+    <div class="feature-grid">
+      <div class="feature-card">
+        <img src="{{ url_for('static', filename='images/h2.jpg') }}" alt="Feature 1">
+        <h3>Simple Class Scheduling</h3>
+        <p>Plan daily or weekly timetables quickly with our easy drag-and-drop feature.</p>
+      </div>
+      <div class="feature-card">
+        <img src="{{ url_for('static', filename='images/h3.jpg') }}" alt="Feature 2">
+        <h3>Advanced Analytics</h3>
+        <p>Track class hours, optimize teacher workloads, and ensure efficient resource usage.</p>
+      </div>
+      <div class="feature-card">
+        <img src="{{ url_for('static', filename='images/h4.jpg') }}" alt="Feature 3">
+        <h3>Customizable Templates</h3>
+        <p>Choose from multiple layout designs that suit your institution’s unique needs.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer Section -->
+  <footer class="site-footer glass">
+    <div class="footer-links">
+      <a href="#">Disclaimer</a>
+      <a href="#">Complete Policy</a>
+      <a href="#">Privacy Policy</a>
+    </div>
+    <p class="footer-note">
+      © 2025 Timetrix. All rights reserved.
+    </p>
+  </footer>
+</body>
+</html>
